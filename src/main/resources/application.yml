@@ -1,0 +1,32 @@
+server:
+  port: 8080
+spring:
+  redis:
+    host: localhost # Redis服务器地址
+    database: 0 # Redis数据库索引（默认为0）
+    port: 6379 # Redis服务器连接端口
+    password:  # Redis服务器连接密码（默认为空）
+    timeout: 3000ms # 连接超时时间（毫秒）
+  servlet:
+    multipart:
+      enabled: true #开启文件上传
+      max-file-size: 10MB #限制文件上传大小为10M
+# 图形验证码相关配置
+kaptcha:
+  height: 50
+  width: 200
+  content:
+    length: 4
+    source: abcdefghjklmnopqrstuvwxyz23456789
+    space: 2
+  font:
+    color: black
+    name: Arial
+    size: 40
+  background-color:
+    from: lightGray
+    to: white
+  border:
+    enabled: true
+    color: black
+    thickness: 1
